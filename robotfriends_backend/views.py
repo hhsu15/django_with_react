@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404, JsonResponse
-\
+
 
 # Create your views here.
 # def index(request):
@@ -18,3 +18,9 @@ def get_data(request):
 def send_data(request):
 	print('data is saved in db')
 	return HttpResponse("Your data has been saved")
+
+def search_robot(request, robot_name):
+	return render(request, "index.html", {'robot_name':robot_name})
+
+
+
